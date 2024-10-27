@@ -431,3 +431,153 @@ body.dark-mode {
   color: #ffffff; /* Texto blanco en el jumbotron */
   -moz-box-sizing: border-box; /* no afecte el padding*/
 }
+
+/* BLOQUE CARRITO*/
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #e7f8e8;
+}
+
+.container-carrito {
+  max-width: 62.5%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #e7f8e8;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/*vaciar carrito*/
+.btn-clear-cart {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+/*vaciar carrito icono */
+.btn-clear-cart i {
+  margin-right: 5px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fcfafa;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product-image {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* tarjeta de producto*/
+.cart-details {
+  margin-left: 15px;
+  flex-grow: 1;
+  color: #151515;
+}
+
+.cart-details h5 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/*controles de cantidad*/
+.quantity-control {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.btn-quantity {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.quantity-control input {
+  width: 40px;
+  text-align: center;
+  margin: 0 8px;
+  font-size: 14px;
+}
+
+/*Datos de pago*/
+.btn-remove {
+  background-color: #f9867e;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+.cart-summary {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.cart-summary p {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.btn-currency {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+.btn-currency.active {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.discount-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.cart-summary p strong {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.foto-carrito1 {
+  width: 60px;
+  height: auto;
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  margin-right: 20%;
+}
