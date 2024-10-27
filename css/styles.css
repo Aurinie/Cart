@@ -438,22 +438,34 @@ body {
   background-color: #e7f8e8;
 }
 
+/* Contenedor principal */
 .container-carrito {
-  max-width: 62.5%;
+  max-width: 600px;
   margin: 20px auto;
   padding: 20px;
   background-color: #e7f8e8;
   border-radius: 8px;
 }
 
+/* Título */
 h1 {
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 700;
   color: #333;
   margin-bottom: 20px;
+  display: inline-block; /* Para colocar el icono al lado */
 }
 
-/*vaciar carrito*/
+/* Icono del carrito */
+.foto-carrito1 {
+  width: 40px;
+  height: auto;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+/* Botón de vaciar carrito */
 .btn-clear-cart {
   display: inline-flex;
   align-items: center;
@@ -464,50 +476,53 @@ h1 {
   cursor: pointer;
   margin-bottom: 15px;
 }
-/*vaciar carrito icono */
-.btn-clear-cart i {
-  margin-right: 5px;
-}
 
+/* Estilo del item del carrito */
 .cart-item {
   display: flex;
   align-items: center;
+  justify-content: space-between; /* Para alinear elementos a los lados */
   padding: 10px;
-  background-color: #fcfafa;
+  background-color: #fff;
   border-radius: 8px;
   margin-bottom: 10px;
 }
 
+/* Imagen del producto */
 .product-image {
-  width: 150px;
+  width: 80px;
   height: auto;
   border-radius: 5px;
 }
 
-/* tarjeta de producto*/
+/* Detalles del carrito */
 .cart-details {
-  margin-left: 15px;
+  display: flex;
+  align-items: center;
   flex-grow: 1;
-  color: #151515;
+  margin-left: 15px;
 }
 
+/* Nombre del producto */
 .cart-details h5 {
   font-size: 16px;
   font-weight: 600;
   margin: 0;
+  margin-right: 15px; /* Espacio entre el nombre y los controles de cantidad */
 }
 
-/*controles de cantidad*/
+/* Controles de cantidad centrados */
 .quantity-control {
   display: flex;
   align-items: center;
-  margin-top: 5px;
+  justify-content: center;
+  margin: 0 15px; /* Espacio entre controles de cantidad y nombre/costo */
 }
 
 .btn-quantity {
   background-color: #e0e0e0;
-  border: none;
-  padding: 5px;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
   font-size: 14px;
   cursor: pointer;
   border-radius: 3px;
@@ -516,34 +531,53 @@ h1 {
 .quantity-control input {
   width: 40px;
   text-align: center;
-  margin: 0 8px;
+  border: 1px solid #ccc;
+  margin: 0 -1px; /* Para evitar doble borde entre botones */
   font-size: 14px;
 }
 
-/*Datos de pago*/
+/* Costo del producto alineado a la derecha */
+.product-cost {
+  font-weight: 500;
+  margin: 0;
+  text-align: right;
+  flex-shrink: 0; /* Evita que se expanda */
+}
+
+/* Botón de eliminar item */
 .btn-remove {
-  background-color: #f9867e;
+  background-color: #f44336;
   border: none;
   color: #fff;
   padding: 5px 10px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 50%;
+  margin-left: 10px;
 }
 
-
+/* Resumen del carrito */
 .cart-summary {
   margin-top: 20px;
   padding: 15px;
-  background-color: #ffffff;
+  background-color: #f9f9f9;
   border-radius: 8px;
 }
 
+/* Estilos para SUBTOTAL y TOTAL con alineación izquierda-derecha */
 .cart-summary p {
   font-size: 14px;
   margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
+.cart-summary p strong {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* Botones de moneda */
 .btn-currency {
   background-color: #e0e0e0;
   border: none;
@@ -559,6 +593,7 @@ h1 {
   color: #fff;
 }
 
+/* Input de cupón */
 .discount-input {
   width: 100%;
   padding: 8px;
@@ -566,18 +601,4 @@ h1 {
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-top: 5px;
-}
-
-.cart-summary p strong {
-  font-weight: 700;
-  font-size: 16px;
-}
-
-.foto-carrito1 {
-  width: 60px;
-  height: auto;
-  position: absolute;
-  right: 20px;
-  top: 70px;
-  margin-right: 20%;
 }
