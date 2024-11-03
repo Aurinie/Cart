@@ -121,9 +121,20 @@ document.addEventListener("DOMContentLoaded", function () {
                     <input type="text" class="discount-input" placeholder="INGRESA TU CODIGO" id="discountCode">
                     <p><strong>TOTAL:</strong> <span id="total">${calculateSubtotal(carrito)}</span></p>
                 </div>
+                 <button class="btn-continue" onclick="window.location.href='categories.html'">Continuar comprando</button>
             `;
         }
     }
+      // ACTUALIZA EN TIEMPO REAL EL CARRITO//
+    function actualizarBadgeCarrito(carrito) {
+        const badge = document.getElementById('cart-count');
+        if (badge) {
+            const totalProductos = carrito.reduce((suma, producto) => suma + producto.cantidad, 0);
+            badge.textContent = totalProductos;
+            badge.classList.toggle("d-none", totalProductos === 0); // Oculta si está vacío
+        }
+    }
+    
 
     // **Función para calcular el subtotal del carrito**
     function calculateSubtotal(carrito) {
@@ -152,6 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem('carrito', JSON.stringify(carrito));
         renderCart();
         actualizarBadgeCarrito(carrito);
+        updateCartNotification(0); // Resetea la notificación del carrito
     };
 
     // **Función para vaciar el carrito**

@@ -461,8 +461,8 @@ h1 {
   width: 40px;
   height: auto;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 10px;
+  top: 10px;
 }
 
 /* Botón de vaciar carrito */
@@ -601,4 +601,16 @@ h1 {
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-top: 5px;
+}
+
+/*Estilo boton "continuar comprando"*/
+
+.btn-continue {
+  background-color: #28a745; /* Color verde */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 8px 12px; /* Espaciado */
+  font-size: 14px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  margin-top: 20px; /* Espaciado superior */
 }
